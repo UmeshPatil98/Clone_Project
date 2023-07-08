@@ -1,2 +1,2 @@
-# Clone_Projest
+# Clone_Project
 This is the Netflix Clone app 
