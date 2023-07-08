@@ -1,0 +1,26 @@
+netflix
+
+
+fetch all movie list;
+
+function fetchAndBuildAllSection(){
+
+  fetch(apiPaths.fetchAllcategaries)
+      .then(res => res.json())
+      .then(res =>console.table (res.genres))
+      .catch(error => console.log(error));
+}
+
+
+fetch  all movies for category  and show
+
+function fetchAndBuildAllSection(){
+  fetch(apiPaths.fetchAllcategaries)
+      .then(res => res.json())
+      .then(res =>{
+     const Categories =  res.genres;
+      if(Array.isArray(Categories) && Categories.length){
+        Categories.forEach(Category =>{
+          FetchbuildmovieSection(Category);
+        });
+
